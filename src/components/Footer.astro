@@ -1,0 +1,46 @@
+---
+import CopyIcon from "@assets/icons/CopyIcon.astro";
+import SendEmailICon from "@assets/icons/SendEmailICon.astro";
+import LetterIcon from "@assets/icons/LetterIcon.astro";
+import ButtonFooter from "@components/ButtonFooter.astro";
+import Subtitles from "@components/Subtitles.astro";
+---
+
+<footer class="flex flex-col gap-4">
+  <Subtitles title="Correo">
+    <LetterIcon />
+  </Subtitles>
+
+  <div class="flex gap-2 w-full">
+    <div
+      id="txtCorreo"
+      class="flex-grow px-3 py-2 bg-orange-400 rounded-lg font-medium text-gray-950 truncate"
+    >
+      johanalvarezz237@gmail.com
+    </div>
+
+    <ButtonFooter message="Enviame un correo">
+      <SendEmailICon />
+    </ButtonFooter>
+
+    <ButtonFooter id="buttonCopy" message="Copiar correo">
+      <CopyIcon />
+    </ButtonFooter>
+  </div>
+</footer>
+
+<script>
+  const txtCorreo = document.getElementById("txtCorreo");
+  const buttonCopy = document.getElementById("buttonCopy");
+
+  buttonCopy.addEventListener("click", () => {
+    navigator.clipboard
+      .writeText(txtCorreo.innerText)
+      .then(() => {
+        alert("Gmail copiado");
+      })
+      .catch((err) => {
+        alert(`Ocurrio un error`);
+      });
+  });
+</script>
