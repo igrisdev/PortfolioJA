@@ -1,0 +1,35 @@
+---
+import img from "../../public/favicon.svg";
+---
+
+<div class="fixed top-0 left-0 right-0 z-20 bg-[#101964]/80 backdrop-blur-lg">
+  <nav class="max-w-3xl mx-auto flex items-center justify-between">
+    <header id="logo" class="flex gap-3 items-center py-2 opacity-0">
+      <picture
+        class="w-14 h-14 rounded-full shadow-red-600 overflow-hidden border-2 border-white"
+      >
+        <img src={img.src} alt="image" />
+      </picture>
+
+      <h1 class="text-base text-orange-400 font-bold">Johan Alvarez</h1>
+    </header>
+
+    <div>boton</div>
+  </nav>
+</div>
+
+<script>
+  const logo = document.getElementById("logo");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 220) {
+      logo.style.opacity = "1";
+      logo.classList.add("animate-fade-down");
+      logo.classList.add("animate-duration-300");
+    } else {
+      logo.style.opacity = "0";
+      logo.classList.remove("animate-fade-down");
+      logo.classList.remove("animate-duration-300");
+    }
+  });
+</script>
