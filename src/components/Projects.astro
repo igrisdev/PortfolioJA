@@ -1,6 +1,10 @@
 ---
 import Subtitles from "@components/Subtitles.astro";
 import StarIcon from "@assets/icons/StarIcon.astro";
+
+import CardProjects from "@components/CardProjects.astro";
+import { projects } from "@services/proyects";
+import ButtonCardProjects from "@components/ButtonCardProjects.astro";
 ---
 
 <section>
@@ -8,5 +12,19 @@ import StarIcon from "@assets/icons/StarIcon.astro";
     <StarIcon />
   </Subtitles>
 
-  <div>d</div>
+  <div class="flex flex-col gap-8 mt-4 mb-16">
+    {
+      projects.map((item) => {
+        if (item.sizeCard) return <CardProjects {...item} />;
+      })
+    }
+
+    <div class="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-8">
+      {
+        projects.map((item) => {
+          if (!item.sizeCard) return <ButtonCardProjects {...item} />;
+        })
+      }
+    </div>
+  </div>
 </section>

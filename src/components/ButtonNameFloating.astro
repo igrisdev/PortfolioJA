@@ -1,0 +1,25 @@
+---
+interface Props {
+  message: string;
+  id?: string;
+  className?: boolean;
+}
+
+const { message, id, className } = Astro.props;
+---
+
+<button
+  id={id}
+  class:list={[
+    "group/item relative",
+    {
+      "bg-white px-5 py-2 rounded-lg": !className,
+    },
+  ]}
+>
+  <slot />
+  <span
+    class="absolute text-black text-xs w-max bg-orange-400 p-1 rounded-lg font-medium group-hover/item:opacity-100 opacity-0 -top-12 right-1/2 translate-x-1/2 translate-y-1/2 transition-all duration-300"
+    >{message}</span
+  >
+</button>

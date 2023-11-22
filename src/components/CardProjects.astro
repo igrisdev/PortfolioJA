@@ -1,0 +1,47 @@
+---
+import ListIcons from "./ListIcons.astro";
+import LinkIcon from "@assets/icons/LinkIcon.astro";
+const { title, description, imageName, skills, urlWeb, urlRepository } =
+  Astro.props;
+---
+
+<article class="grid grid-cols-1 md:grid-cols-2 gap-8 group">
+  <a
+    href={urlWeb}
+    target="_blank"
+    class="w-full h-full max-h-[350px] md:h-56 bg-orange-400 rounded-lg overflow-hidden"
+  >
+    <picture>
+      <img
+        class="w-full h-full translate-x-8 translate-y-8 group-hover:translate-x-6 group-hover:translate-y-6 rounded-lg transition-all duration-500"
+        src=`/@fs/C:/Users/TJIGRIS/Desktop/DESARROLLO/github/PortfolioJA/src/assets/imageProjects/${imageName}.png`
+        alt={title}
+      />
+    </picture>
+  </a>
+
+  <section class="flex flex-col gap-2 justify-center">
+    <h2 class="text-white text-3xl font-semibold">{title}</h2>
+    <p class="text-gray-400 text-sm">
+      {description}
+    </p>
+
+    <ListIcons skills={skills} />
+
+    <div class="flex gap-3">
+      <a
+        href={urlRepository}
+        class="bg-white px-4 py-2 rounded-lg font-semibold"
+        target="_blank">Code</a
+      >
+
+      <a
+        href={urlWeb}
+        class="bg-white flex gap-2 hover:gap-5 transition-all duration-200 px-4 py-2 rounded-lg font-semibold group/link"
+        target="_blank"
+        >Live
+        <LinkIcon />
+      </a>
+    </div>
+  </section>
+</article>

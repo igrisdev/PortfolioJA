@@ -2,7 +2,7 @@
 import CopyIcon from "@assets/icons/CopyIcon.astro";
 import SendEmailICon from "@assets/icons/SendEmailICon.astro";
 import LetterIcon from "@assets/icons/LetterIcon.astro";
-import ButtonFooter from "@components/ButtonFooter.astro";
+import ButtonNameFloating from "@components/ButtonNameFloating.astro";
 import Subtitles from "@components/Subtitles.astro";
 ---
 
@@ -19,13 +19,13 @@ import Subtitles from "@components/Subtitles.astro";
       johanalvarezz237@gmail.com
     </div>
 
-    <ButtonFooter message="Enviame un correo">
+    <ButtonNameFloating id="buttonSend" message="Enviame un correo">
       <SendEmailICon />
-    </ButtonFooter>
+    </ButtonNameFloating>
 
-    <ButtonFooter id="buttonCopy" message="Copiar correo">
+    <ButtonNameFloating id="buttonCopy" message="Copiar correo">
       <CopyIcon />
-    </ButtonFooter>
+    </ButtonNameFloating>
   </div>
 </footer>
 
@@ -42,5 +42,19 @@ import Subtitles from "@components/Subtitles.astro";
       .catch((err) => {
         alert(`Ocurrio un error`);
       });
+  });
+
+  const email = "johanalvarezzz237@gmail.com";
+  const subject = "Asunto del correo";
+  const body = "Cuerpo del correo electrónico";
+
+  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+    subject,
+  )}&body=${encodeURIComponent(body)}`;
+
+  const buttonSend = document.getElementById("buttonSend");
+
+  buttonSend.addEventListener("click", () => {
+    window.open(mailtoLink);
   });
 </script>
