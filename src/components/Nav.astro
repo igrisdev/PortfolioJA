@@ -4,7 +4,7 @@ import ButtonChangeColor from "@components/ButtonChangeColor";
 ---
 
 <div
-  class="fixed top-0 left-0 right-0 z-20 bg-P-light-backgound-primary/80 backdrop-blur-lg h-24"
+  class="fixed top-0 left-0 right-0 z-20 bg-P-light-backgound-primary/80 dark:bg-P-dark-backgound-primary/80 backdrop-blur-lg h-24"
 >
   <nav
     class="max-w-3xl h-full mx-auto flex items-center justify-between p-4 lg:p-0"
@@ -16,13 +16,15 @@ import ButtonChangeColor from "@components/ButtonChangeColor";
         <img src={img.src} alt="image" />
       </picture>
 
-      <h1 class="text-base text-P-light-title-primary font-bold">
+      <h1
+        class="text-base text-P-light-title-primary dark:text-P-dark-title-primary font-bold"
+      >
         Johan Alvarez
       </h1>
     </header>
 
     <div>
-      <ButtonChangeColor />
+      <ButtonChangeColor client:load />
     </div>
   </nav>
 </div>

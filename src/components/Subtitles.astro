@@ -6,7 +6,11 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<div class="flex gap-2 items-center">
-  <h3 class="text-2xl font-medium text-P-light-title-primary">{title}</h3>
+<div
+  class="flex gap-2 items-center text-P-light-title-primary dark:text-P-dark-title-primary"
+>
+  <h3 class="text-2xl font-medium">
+    {title}
+  </h3>
   <slot />
 </div>
