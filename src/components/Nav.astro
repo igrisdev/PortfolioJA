@@ -1,20 +1,29 @@
 ---
 import img from "../../public/favicon.svg";
+import ButtonChangeColor from "@components/ButtonChangeColor";
 ---
 
-<div class="fixed top-0 left-0 right-0 z-20 bg-[#101964]/80 backdrop-blur-lg h-24">
-  <nav class="max-w-3xl h-full mx-auto flex items-center justify-between p-4 lg:p-0">
+<div
+  class="fixed top-0 left-0 right-0 z-20 bg-P-light-backgound-primary/80 backdrop-blur-lg h-24"
+>
+  <nav
+    class="max-w-3xl h-full mx-auto flex items-center justify-between p-4 lg:p-0"
+  >
     <header id="logo" class="flex gap-3 items-center py-2 opacity-0">
       <picture
-        class="w-14 h-14 rounded-full shadow-red-600 overflow-hidden border-2 border-white"
+        class="w-14 h-14 rounded-full shadow-P-light-backgound-secondary overflow-hidden border-2 border-P-light-backgound-tertiary"
       >
         <img src={img.src} alt="image" />
       </picture>
 
-      <h1 class="text-base text-orange-400 font-bold">Johan Alvarez</h1>
+      <h1 class="text-base text-P-light-title-primary font-bold">
+        Johan Alvarez
+      </h1>
     </header>
 
-    <div>boton</div>
+    <div>
+      <ButtonChangeColor />
+    </div>
   </nav>
 </div>
 
