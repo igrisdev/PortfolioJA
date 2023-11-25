@@ -14,12 +14,12 @@ import Subtitles from "@components/Subtitles.astro";
   <div class="flex gap-2 w-full">
     <div
       id="txtCorreo"
-      class="flex-grow px-3 py-2 bg-P-light-backgound-secondary dark:bg-P-dark-backgound-secondary rounded-lg font-medium text-P-light-text-secondary dark:text-P-dark-text-secondary truncate"
+      class="flex-grow px-3 py-2 bg-P-light-background-secondary dark:bg-P-dark-background-secondary rounded-lg font-medium text-P-light-text-secondary dark:text-P-dark-text-secondary truncate"
     >
       johanalvarezz237@gmail.com
     </div>
 
-    <ButtonNameFloating id="buttonSend" message="Enviame un correo">
+    <ButtonNameFloating id="buttonSend" message="Envíame un correo">
       <SendEmailICon />
     </ButtonNameFloating>
 
@@ -37,10 +37,10 @@ import Subtitles from "@components/Subtitles.astro";
     navigator.clipboard
       .writeText(txtCorreo.innerText)
       .then(() => {
-        alert("Gmail copiado");
+        alert("Email copiado");
       })
       .catch((err) => {
-        alert(`Ocurrio un error`);
+        alert(`Ocurrió un error`);
       });
   });
 

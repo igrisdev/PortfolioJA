@@ -24,11 +24,9 @@ export default function ButtonChangeColor() {
     if (modeColor === 'dark') {
       setChangeColor(true)
       body.classList.add('dark')
-      console.log(modeColor);
     } else if (modeColor === 'white') {
       setChangeColor(false)
       body.classList.remove('dark')
-      console.log(modeColor);
     }
   }, [changeColor])
 
