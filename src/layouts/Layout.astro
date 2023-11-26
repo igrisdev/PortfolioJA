@@ -1,5 +1,7 @@
 ---
 import Nav from "../components/Nav.astro";
+import "../pages/globals.css";
+
 interface Props {
 	title: string;
 }
@@ -18,9 +20,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="">
-		<div
-			class="bg-P-light-background-primary dark:bg-P-dark-background-primary"
-		>
+		<div class="bg-P-background-primary">
 			<Nav />
 
 			<div class="max-w-3xl mx-auto relative p-4 lg:p-0 lg:py-4">

@@ -11,16 +11,15 @@ const { message, id, className } = Astro.props;
 <button
   id={id}
   class:list={[
-    "group/item relative text-P-light-title-primary  dark:text-white",
+    "group/item relative text-P-text-primary",
     {
-      "bg-P-light-background-tertiary dark:bg-P-dark-background-secondary px-5 py-2 rounded-lg":
-        !className,
+      "bg-P-background-tertiary px-5 py-2 rounded-lg": !className,
     },
   ]}
 >
   <slot />
   <span
-    class="absolute text-P-light-text-secondary dark:text-white text-xs w-max bg-P-light-background-secondary dark:bg-P-dark-background-secondary p-1 rounded-lg font-medium group-hover/item:opacity-100 opacity-0 -top-12 right-1/2 translate-x-1/2 translate-y-1/2 transition-all duration-300"
+    class="absolute text-P-text-secondary text-xs w-max bg-P-background-secondary p-1 rounded-lg font-medium group-hover/item:opacity-100 opacity-0 -top-12 right-1/2 translate-x-1/2 translate-y-1/2 transition-all duration-300"
     >{message}</span
   >
 </button>
