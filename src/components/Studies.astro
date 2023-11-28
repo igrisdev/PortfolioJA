@@ -13,7 +13,7 @@ import StudiesIcon from "@assets/iconsAstro/StudiesIcon.astro";
 
     <ul class="list-disc pl-6 text-P-text-primary">
       <li>
-        <p>Estudiante de sexto semestre</p>
+        <p id="studies-time"></p>
       </li>
     </ul>
 
@@ -23,8 +23,40 @@ import StudiesIcon from "@assets/iconsAstro/StudiesIcon.astro";
 
     <ul class="list-disc pl-6 text-P-text-primary">
       <li>
-        <p>Técnico echo en el sena</p>
+        <p>Técnico otorgado por el SENA.</p>
       </li>
     </ul>
   </div>
 </section>
+
+<script>
+  const date = new Date();
+
+  const year = date.getFullYear();
+  const month = date.getMonth();
+
+  const message = document.getElementById("studies-time");
+
+  if (year >= 2026 && month > 6) {
+    message.innerHTML = "Carrera terminada en UNIMAYOR";
+  } else {
+    if (year == 2023 && month > 6) {
+      message.innerHTML = "Estudiante de quinto semestre.";
+    }
+    if (year == 2024 && month < 6) {
+      message.innerHTML = "Estudiante de sexto semestre.";
+    }
+    if (year == 2024 && month > 6) {
+      message.innerHTML = "Estudiante de séptimo semestre.";
+    }
+    if (year == 2025 && month < 6) {
+      message.innerHTML = "Estudiante de octavo semestre.";
+    }
+    if (year == 2025 && month > 6) {
+      message.innerHTML = "Estudiante de noveno semestre.";
+    }
+    if (year == 2026 && month < 6) {
+      console.log("Estudiante de décimo semestre.");
+    }
+  }
+</script>

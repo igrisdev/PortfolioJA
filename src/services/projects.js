@@ -6,7 +6,7 @@ export const projects = [
     sizeCard: true,
     skills: ['react', 'tailwind'],
     imageName: 'clima',
-    description: 'App en la que aplique la mayoría de conceptos de react que conozco hasta el momento.'
+    description: 'App en la que aplique todos los conceptos que tengo hasta el momento, uso se hooks como useReducer y useContext.'
   },
   {
     title: "Generador de notas",
@@ -15,7 +15,7 @@ export const projects = [
     sizeCard: true,
     skills: ['react', 'tailwind'],
     imageName: 'random',
-    description: 'App en la que practique mas react y fetching de datos.'
+    description: 'App en la que practique el hook useContext principalmente y llamada de una api con fetch.'
   },
   {
     title: "Todo List",
@@ -24,7 +24,7 @@ export const projects = [
     sizeCard: false,
     skills: ['react', 'tailwind'],
     imageName: 'todo',
-    description: 'App en la que reforcé mas los useHooks principales.'
+    description: 'App en la que aplique los conceptos de rutas con la librería React Router.'
   },
   {
     title: "Buscar apartamento",
