@@ -1,6 +1,7 @@
 ---
 import ListIcons from "./ListIcons.astro";
 import LinkIcon from "@assets/iconsAstro/LinkIcon.astro";
+
 const { title, description, imageName, skills, urlWeb, urlRepository } =
   Astro.props;
 ---
@@ -14,7 +15,7 @@ const { title, description, imageName, skills, urlWeb, urlRepository } =
     <picture>
       <img
         class="w-full h-full translate-x-8 translate-y-8 group-hover:translate-x-6 group-hover:translate-y-6 rounded-lg transition-all duration-500"
-        src=`/@fs/C:/Users/TJIGRIS/Desktop/DESARROLLO/github/PortfolioJA/src/assets/imageProjects/${imageName}.png`
+        src={imageName}
         alt={title}
       />
     </picture>
