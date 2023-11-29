@@ -5,7 +5,7 @@ export const projects = [
     urlWeb: 'https://gleeful-salmiakki-5ff1cd.netlify.app/',
     sizeCard: true,
     skills: ['react', 'tailwind'],
-    imageName: '/@fs/C:/Users/TJIGRIS/Desktop/DESARROLLO/github/PortfolioJA/src/assets/imageProjects/clima.png?origWidth=1889&origHeight=952&origFormat=png',
+    imageName: 'https://res.cloudinary.com/dbwupri3k/image/upload/v1701230671/PortfolioJA/ImageProjects/allvu6b9935bsghbw8pq.webp',
     description: 'App en la que aplique todos los conceptos que tengo hasta el momento, uso se hooks como useReducer y useContext.'
   },
   {
@@ -14,7 +14,7 @@ export const projects = [
     urlWeb: 'https://random-quote-generator-tjigris.netlify.app/',
     sizeCard: true,
     skills: ['react', 'tailwind'],
-    imageName: '/@fs/C:/Users/TJIGRIS/Desktop/DESARROLLO/github/PortfolioJA/src/assets/imageProjects/random.png?origWidth=1872&origHeight=955&origFormat=png',
+    imageName: 'https://res.cloudinary.com/dbwupri3k/image/upload/v1701230672/PortfolioJA/ImageProjects/vjtj2kcdswsebtaknttx.webp',
     description: 'App en la que practique el hook useContext principalmente y llamada de una api con fetch.'
   },
   {
