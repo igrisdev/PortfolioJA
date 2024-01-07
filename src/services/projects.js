@@ -9,7 +9,7 @@ export const projects = [
       { url: 'https://res.cloudinary.com/dbwupri3k/image/upload/v1701231522/PortfolioJA/IconsSkills/lzeyxmohh4plhwimeaod.svg', skill: 'tailwind' }
     ],
     imageName: 'https://res.cloudinary.com/dbwupri3k/image/upload/v1701230671/PortfolioJA/ImageProjects/allvu6b9935bsghbw8pq.webp',
-    description: 'App en la que aplique todos los conceptos que tengo hasta el momento, uso se hooks como useReducer y useContext.'
+    description: 'App en la que aplique todos los conceptos que tengo hasta el momento, uso de hooks como useReducer y useContext.'
   },
   {
     title: "Generador de notas",
