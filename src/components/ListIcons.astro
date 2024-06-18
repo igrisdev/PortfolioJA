@@ -7,7 +7,7 @@ const { skills } = Astro.props;
   {
     skills.map((item) => (
       <ButtonNameFloating message={item.skill.toUpperCase()} className={true}>
-        <img src={item.url} alt={item.skill} />
+        <img class='w-7 h-7' src={item.url} alt={item.skill} />
       </ButtonNameFloating>
     ))
   }
