@@ -1,60 +1,66 @@
 ---
-import CopyIcon from "@assets/iconsAstro/CopyIcon.astro";
-import SendEmailICon from "@assets/iconsAstro/SendEmailICon.astro";
-import LetterIcon from "@assets/iconsAstro/LetterIcon.astro";
-import ButtonNameFloating from "@components/ButtonNameFloating.astro";
-import Subtitles from "@components/Subtitles.astro";
+import CopyIcon from '@assets/iconsAstro/CopyIcon.astro'
+import SendEmailICon from '@assets/iconsAstro/SendEmailICon.astro'
+import LetterIcon from '@assets/iconsAstro/LetterIcon.astro'
+import ButtonNameFloating from '@components/ButtonNameFloating.astro'
+import Subtitles from '@components/Subtitles.astro'
 ---
 
-<footer class="flex flex-col gap-4">
-  <Subtitles title="Correo">
+<footer class='flex flex-col gap-4'>
+  <Subtitles title='Correo'>
     <LetterIcon />
   </Subtitles>
 
-  <div class="flex gap-2 w-full">
+  <div class='flex gap-2 w-full'>
     <div
-      id="txtCorreo"
-      class="flex-grow px-3 py-2 bg-P-background-secondary rounded-lg font-medium text-P-text-secondary truncate"
+      id='txtCorreo'
+      class='flex-grow px-3 py-2 bg-P-background-secondary rounded-lg font-medium text-P-text-secondary truncate'
     >
-      johanalvarezz237@gmail.com
+      johan.manuel.alvarez.pinta@gmail.com
     </div>
 
-    <ButtonNameFloating id="buttonSend" message="Envíame un correo">
+    <ButtonNameFloating
+      id='buttonSend'
+      message='Envíame un correo'
+    >
       <SendEmailICon />
     </ButtonNameFloating>
 
-    <ButtonNameFloating id="buttonCopy" message="Copiar correo">
+    <ButtonNameFloating
+      id='buttonCopy'
+      message='Copiar correo'
+    >
       <CopyIcon />
     </ButtonNameFloating>
   </div>
 </footer>
 
 <script>
-  const txtCorreo = document.getElementById("txtCorreo");
-  const buttonCopy = document.getElementById("buttonCopy");
+  const txtCorreo = document.getElementById('txtCorreo')
+  const buttonCopy = document.getElementById('buttonCopy')
 
-  buttonCopy.addEventListener("click", () => {
+  buttonCopy.addEventListener('click', () => {
     navigator.clipboard
       .writeText(txtCorreo.innerText)
       .then(() => {
-        alert("Email copiado");
+        alert('Email copiado')
       })
       .catch((err) => {
-        alert(`Ocurrió un error`);
-      });
-  });
+        alert(`Ocurrió un error`)
+      })
+  })
 
-  const email = "johanalvarezzz237@gmail.com";
-  const subject = "Asunto del correo";
-  const body = "Cuerpo del correo electrónico";
+  const email = 'johanalvarezzz237@gmail.com'
+  const subject = 'Asunto del correo'
+  const body = 'Cuerpo del correo electrónico'
 
   const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
-    subject,
-  )}&body=${encodeURIComponent(body)}`;
+    subject
+  )}&body=${encodeURIComponent(body)}`
 
-  const buttonSend = document.getElementById("buttonSend");
+  const buttonSend = document.getElementById('buttonSend')
 
-  buttonSend.addEventListener("click", () => {
-    window.open(mailtoLink);
-  });
+  buttonSend.addEventListener('click', () => {
+    window.open(mailtoLink)
+  })
 </script>
