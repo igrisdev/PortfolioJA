@@ -1,3 +1,4 @@
+
 export const projects = (await api()) || []
 
 async function api() {
