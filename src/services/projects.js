@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: 'Horario UniMayor',
+    title: 'UniMayor',
     urlRepository: 'https://github.com/igrisdev/horario_unimayor',
     urlWeb: 'https://horario-unimayor.vercel.app',
     sizeCard: true,
