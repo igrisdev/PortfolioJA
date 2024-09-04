@@ -6,7 +6,6 @@ export const CardProjects = ({
   urlWeb,
   urlRepository,
 }) => {
-  console.log(title, description)
   return (
     <article className='grid grid-cols-1 md:grid-cols-2 gap-8 group'>
       <a
@@ -24,7 +23,9 @@ export const CardProjects = ({
       </a>
 
       <section className='flex flex-col gap-2 justify-center'>
-        <h2 className='text-P-subtitle-primary text-3xl font-semibold'>{title}</h2>
+        <h2 className='text-P-subtitle-primary text-3xl font-semibold'>
+          {title}
+        </h2>
         <p className='text-P-text-primary text-sm'>{description}</p>
 
         {/* <ListIcons skills={skills} /> */}
