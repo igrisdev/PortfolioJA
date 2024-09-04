@@ -1,3 +1,6 @@
+import { LinkIcon } from '../assets/iconsReact/LinkIcon'
+import { ListIcons } from './ListIcons'
+
 export const CardProjects = ({
   title,
   description,
@@ -28,7 +31,10 @@ export const CardProjects = ({
         </h2>
         <p className='text-P-text-primary text-sm'>{description}</p>
 
-        {/* <ListIcons skills={skills} /> */}
+        <ListIcons
+          skills={skills}
+          client:load
+        />
 
         <div className='flex gap-3'>
           <a
@@ -45,7 +51,7 @@ export const CardProjects = ({
             target='_blank'
           >
             Live
-            {/* <LinkIcon /> */}
+            <LinkIcon />
           </a>
         </div>
       </section>
