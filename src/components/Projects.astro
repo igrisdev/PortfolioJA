@@ -5,12 +5,18 @@ import StarIcon from '@assets/iconsAstro/StarIcon.astro'
 import CardProjects from '@components/CardProjects.astro'
 import { projects } from '@services/projects'
 import ButtonCardProjects from '@components/ButtonCardProjects.astro'
+import { ContainerProjects } from './ContainerProjects'
+
+
+
 ---
 
 <section>
   <Subtitles title='Proyectos'>
     <StarIcon />
   </Subtitles>
+
+  <ContainerProjects client:load />
 
   <div class='flex flex-col gap-8 mt-4 mb-16'>
     {
