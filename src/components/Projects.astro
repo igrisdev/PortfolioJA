@@ -2,13 +2,7 @@
 import Subtitles from '@components/Subtitles.astro'
 import StarIcon from '@assets/iconsAstro/StarIcon.astro'
 
-import CardProjects from '@components/CardProjects.astro'
-import { projects } from '@services/projects'
-import ButtonCardProjects from '@components/ButtonCardProjects.astro'
 import { ContainerProjects } from './ContainerProjects'
-
-
-
 ---
 
 <section>
@@ -17,20 +11,4 @@ import { ContainerProjects } from './ContainerProjects'
   </Subtitles>
 
   <ContainerProjects client:load />
-
-  <div class='flex flex-col gap-8 mt-4 mb-16'>
-    {
-      projects.map((item) => {
-        if (item.sizeCard) return <CardProjects {...item} />
-      })
-    }
-
-    <div class='grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-8'>
-      {
-        projects.map((item) => {
-          if (!item.sizeCard) return <ButtonCardProjects {...item} />
-        })
-      }
-    </div>
-  </div>
 </section>
