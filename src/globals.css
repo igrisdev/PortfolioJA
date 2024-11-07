@@ -4,20 +4,16 @@
 
 @layer base {
   :root {
-    --title-primary: #ffffff;
+    --title-primary: #000000;
 
-    --subtitle-primary: #98fb98;
+    --subtitle-primary: #129a12;
 
-    --text-primary: #fffff0;
-    --text-secondary: #b0b0b0;
+    --text-primary: #181818;
+    --text-secondary: #535353;
 
-    --background-primary: linear-gradient(
-      90deg,
-      rgba(1, 27, 0, 1) 0%,
-      rgba(2, 14, 0, 1) 100%
-    );
+    --background-primary: #fff;
     --background-secondary: #98fb98;
-    --background-tertiary: #fff;
+    --background-tertiary: #98fb98;
   }
 
   .dark {
@@ -38,4 +34,3 @@
   background: rgb(2, 87, 0);
   background: var(--background-primary);
 }
-
